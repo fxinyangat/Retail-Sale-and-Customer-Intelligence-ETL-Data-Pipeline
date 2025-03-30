@@ -111,3 +111,17 @@ Design Characteristics
 - Cloud-Native: Utilizes AWS-native services (S3, Redshift, IAM) and follows best practices in credential and resource management.
 - Production-Ready: Designed for automation and monitoring. Suitable for integration with orchestration tools such as Apache Airflow or AWS Step Functions.
 
+Scalability & Extensibility
+- The architecture supports additional pipelines by simply adding new extract/transform/load scripts.
+- Ready to be orchestrated using Apache Airflow (Docker setup in progress).
+- Easily portable to other data warehouses (e.g., Snowflake, BigQuery) by modifying the Redshift loader module.
+- Future-ready for ML integration, batch scoring, or visualization via BI tools.
+
+**Future Enhancements**
+- Orchestrate pipelines with Apache Airflow (Docker-based)
+- Query directly from Amazon Athena for serverless analytics
+- Add data quality checks with Great Expectations or Soda Core
+- Implement unit tests for transformation logic
+- Containerize the entire ETL using Docker
+- Build dashboards in Power BI or QuickSight
+- Introduce ML models for churn prediction and LTV scoring
